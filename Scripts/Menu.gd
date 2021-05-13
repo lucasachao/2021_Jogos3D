@@ -1,6 +1,6 @@
 extends Node2D
 
-#teste
+#teste deu certo
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

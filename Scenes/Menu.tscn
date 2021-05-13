@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Images/normal.png" type="Texture" id=1]
+[ext_resource path="res://Images/bg.png" type="Texture" id=2]
+[ext_resource path="res://Images/hover.png" type="Texture" id=3]
+[ext_resource path="res://Images/pressed.png" type="Texture" id=4]
+[ext_resource path="res://LEMONMILK-Regular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Images/quit_nomal.png" type="Texture" id=6]
+[ext_resource path="res://Images/quit_pressed.png" type="Texture" id=7]
+[ext_resource path="res://Images/quit_hover.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 529.931, 298.337 )
+scale = Vector2( 2.48724, 2.48724 )
+texture = ExtResource( 2 )
+
+[node name="Play" type="TextureButton" parent="."]
+margin_left = 758.189
+margin_top = 444.501
+margin_right = 948.189
+margin_bottom = 493.501
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Play"]
+margin_left = 48.0
+margin_right = 135.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TextureButton" parent="."]
+margin_left = 164.235
+margin_top = 444.501
+margin_right = 354.235
+margin_bottom = 493.501
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Quit"]
+margin_left = 48.0
+margin_right = 135.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+text = "quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

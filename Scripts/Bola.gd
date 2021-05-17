@@ -1,5 +1,5 @@
 extends KinematicBody
- #teste
+ #teste de novo
 
 # Declare member variables here. Examples:
 var speed = 10
